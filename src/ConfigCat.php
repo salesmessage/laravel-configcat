@@ -24,8 +24,8 @@ class ConfigCat implements FeatureFlagProviderContract
     public function __construct(
         ClientInterface $configCatClient,
         $defaultValue = false,
-        string $userTransformer = null,
-        string $overridesFilePath = null
+        ?string $userTransformer = null,
+        ?string $overridesFilePath = null
     ) {
         $this->configCatClient = $configCatClient;
         $this->defaultValue = $defaultValue;
