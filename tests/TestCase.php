@@ -67,7 +67,7 @@ abstract class TestCase extends Orchestra
      * @param Closure|null  $mock
      * @return object
      */
-    public function mock($abstract, Closure $mock = null): object
+    public function mock($abstract, ?Closure $mock = null): object
     {
         return $this->instance($abstract, Mockery::mock(...array_filter(func_get_args())));
     }
